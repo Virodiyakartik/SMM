@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamHome Elite | Premium Marketing</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: linear-gradient(90deg, #134e5e, #71b280);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo h2 {
+            color: #ffd54f;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #ffd54f;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* HEADER */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h1 {
+            font-size: 42px;
+            color: #134e5e;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* VIDEO SECTION */
+        .video-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+            background: #000;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .video-overlay-info {
+            padding: 25px;
+            background: #fff;
+            border-top: 5px solid #71b280;
+        }
+
+        /* MARKETING CARDS */
+        .marketing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.4s ease;
+            border-top: 5px solid #ffd54f;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .card i {
+            font-size: 45px;
+            color: #71b280;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            color: #134e5e;
+            margin-bottom: 15px;
+        }
+
+        .card h4 {
+            color: #71b280;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* GALLERY SECTION */
+        .gallery-title {
+            text-align: center;
+            font-size: 32px;
+            color: #134e5e;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .gallery-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #ffd54f;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px; /* Space before image info */
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .item-details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(19, 78, 94, 0.95));
+            color: #fff;
+        }
+
+        /* CTA BUTTON */
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 60px auto 0;
+            padding: 16px 45px;
+            background: #ffd54f;
+            color: #134e5e;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(255, 213, 79, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #ffca28;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f2027;
+            color: rgba(255,255,255,0.7);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        @media(max-width: 768px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+            .section-header h1 { font-size: 32px; }
+            .marketing-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo"><h2>DreamHome Elite</h2></div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="Gallery Page.html">Gallery</a></li>
+        <li><a href="cantact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <header class="section-header">
+        <h1>Premium Property Marketing</h1>
+        <p>High-End Visual Solutions for Luxury Real Estate</p>
+    </header>
+
+    <div class="video-container">
+        <video controls autoplay muted loop>
+            <source src="House.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay-info">
+            <h2 style="color: #134e5e;"><i class="fas fa-play-circle"></i> Cinematic Walkthrough</h2>
+            <p style="color: #666;">Experience properties like never before with high-definition cinematic tours.</p>
+        </div>
+    </div>
+
+    <div class="marketing-grid">
+        <div class="card">
+            <i class="fas fa-film"></i>
+            <h2>Video Marketing</h2>
+            <h4>What is it?</h4>
+            <p>Dynamic visual storytelling using 4K cinematic footage to showcase a property's unique atmosphere.</p>
+            <h4>Why use it?</h4>
+            <p>Listings with video receive 400% more inquiries and build instant emotional trust with buyers.</p>
+            <h4>How it works?</h4>
+            <p>We use stabilized cameras and drones to capture a realistic "walkthrough" experience.</p>
+        </div>
+    </div>
+
+    <h2 class="gallery-title">Luxury Portfolio</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="Luxury Villa.webp" alt="Villa">
+            <div class="item-details">
+                <h3>The Grand Villa</h3>
+                <p>Modern Architecture & Lighting</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="Modern Penthouse.jpg" alt="Penthouse">
+            <div class="item-details">
+                <h3>Sky Penthouse</h3>
+                <p>Sophisticated Interior Design</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="City Apartment.jpg" alt="Apartment">
+            <div class="item-details">
+                <h3>Urban Oasis</h3>
+                <p>Minimalist Style with City Views</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="Beach House.jfif" alt="Beach House">
+            <div class="item-details">
+                <h3>Coastal Retreat</h3>
+                <p>Luxury Living by the Ocean</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="marketing-grid">
+        <div class="card">
+            <i class="fas fa-camera"></i>
+            <h2>Image Marketing</h2>
+            <h4>What is it?</h4>
+            <p>Professional architectural photography focusing on perfect composition and natural lighting.</p>
+            <h4>Why use it?</h4>
+            <p>High-quality imagery increases perceived value and ensures a powerful first impression.</p>
+            <h4>How it works?</h4>
+            <p>Using wide-angle lenses and HDR during the "Golden Hour" for bright, inviting visuals.</p>
+        </div>
+    </div>
+
+    <a href="#" class="cta-button">Explore More Projects</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 DreamHome Elite. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

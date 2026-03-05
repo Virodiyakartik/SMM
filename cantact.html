@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – DreamHome</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+body{
+    background:#f4f6f8;
+    color:#2c2c2c;
+}
+
+/* HEADER */
+header{
+    background:
+        linear-gradient(rgba(19,78,94,0.85),rgba(113,178,128,0.85)),
+        url("https://images.unsplash.com/photo-1568605114967-8130f3a36994");
+    background-size:cover;
+    background-position:center;
+    padding:80px 20px;
+    color:#fff;
+    text-align:center;
+}
+header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+header p{
+    font-size:18px;
+}
+
+/* CONTACT SECTION */
+section{
+    padding:80px 20px;
+}
+.contact-container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+/* FORM */
+form input, form textarea{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:18px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+form textarea{
+    resize:none;
+    height:140px;
+}
+form button{
+    background:#ffd54f;
+    border:none;
+    padding:14px 35px;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+form button:hover{
+    background:#ffca28;
+    transform:scale(1.05);
+}
+
+/* CONTACT INFO */
+.info-box i{
+    font-size:28px;
+    color:#71b280;
+    margin-bottom:12px;
+}
+.info-box h3{
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#0f2027;
+    color:#fff;
+    padding:35px 20px;
+    text-align:center;
+    margin-top:60px;
+}
+footer a{
+    color:#ffd54f;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Contact Us</h1>
+    <p>We’d love to help you find your dream home</p>
+</header>
+
+<section>
+<div class="contact-container">
+    <div class="contact-grid">
+
+        <!-- CONTACT FORM -->
+        <div>
+            <h2 style="margin-bottom:20px;">Send Us a Message</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div>
+            <h2 style="margin-bottom:20px;">Contact Information</h2>
+
+            <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>123 Dream Street, New City, USA</p>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Phone</h3>
+                <p>+1 234 567 890</p>
+            </div>
+
+            <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>info@dreamhome.com</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<footer>
+    <p>&copy; 2025 DreamHome. All Rights Reserved.</p>
+    <p><a href="index.html">Back to Home</a></p>
+</footer>
+
+</body>
+</html>
